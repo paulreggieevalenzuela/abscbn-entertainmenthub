@@ -1,0 +1,406 @@
+///////////////////
+// Media Queries //
+///////////////////
+
+// NOTE: Extra small devices are default styles (mobile-first)
+// $screen-xs: 568px;
+// $screen-sm: 728px;
+// $screen-md: 960px;
+// $screen-lg: 1240px;
+// Retina query (remove when not needed)
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+	
+}
+
+// Largest devices
+@media (max-width: $screen-lg) {
+	
+}
+
+// Large devices
+@media (max-width: $screen-md) {
+	.container {
+		width: 100%;
+		.ads-img {
+			margin-top: 0;
+		}
+		.left-section {
+			display: block;
+			float: none;
+			width: 95%;
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+		.right-section {
+			float: none;
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			margin: 0 auto;
+			background: #ebebeb;
+			padding: 10px 0 50px 0;
+			header {
+				width: 95%;
+				h1 {
+					text-align: center;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+			.ads-wrapper {
+				width: 90%;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			.ads-item {
+				header {
+					a {
+						text-decoration: none;
+						color: #333;
+					}
+					h3 {
+						text-align: center;
+						margin: 10px 0 0 0;
+						font-size: 18px;
+						font-weight: 300;
+					}
+				}
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+	}
+	.main-container {
+		.thumbnail-container {
+			article {
+				width: 49%;
+				a {
+					.thumb-description {
+						h2 {
+							font-size: 22px;
+						}
+					}
+				}
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+		.hero-skinning {
+			img {
+				margin: 10px 0;
+				max-width: 100%;
+			}
+		}
+		.pin-title {
+			width: 98%;
+		}
+		.pinterest-container {
+			width: 98%;
+			article {
+				width: 98%;
+				.pin-description {
+					h2 {
+						font-size: 18px;
+					}
+				}
+			}
+			// .pinterest-grid {
+			// 	margin-left: 18px;
+			// }
+		}
+	}
+	footer {
+		height: 100%;
+		.holder {
+			.left, .right {
+				float: none;
+				text-align: center;
+			}
+			.right {
+				padding-bottom: 5px;
+			}
+			.left {
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+// Medium devices
+@media (max-width: $screen-sm) {
+	.container {
+		.left-section {
+			article {
+				.image {
+					padding: 10px;
+				}
+				.pin-content {
+					padding: 10px 0px 0px 10px;
+				}
+				.pin-description {
+					h2 {
+						font-size: 18px;
+					}
+					p {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.right-section {
+			section {
+				article {
+					.ads-sm {
+						display: none;
+					}
+					.ads-lg {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.column {
+		float: none;
+	}
+	.size1of3 {
+		width: 100%;
+	}
+	.size-1of3 {
+		width: 100%;
+	}
+	.main-container {
+		.thumbnail-container {
+			article {
+				a {
+					.thumb-description {
+						min-height: 100px;
+						padding: 10px;
+						h2 {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+		.hero-skinning {
+			padding-top: 100px;
+		}
+		.pin-title {
+			h2 {
+				font-size: 20px;
+			}
+		}
+		.pinterest-container {
+			.pinterest-grid {
+				margin-left: 0;
+				article {
+					display: flex;
+					flex-direction: row;
+					width: 99%;
+					.border-top-left-sm, .border-top-right-sm {
+						display: block;
+					}
+					img {
+						max-width: 100%;
+						padding: 10px;
+					}
+					.pin-content {
+						padding: 10px 10px 10px 0;
+						width: 60%;
+					}
+					.pin-description {
+						p {
+							font-size: 12px;
+						}
+						h2 {
+							font-size: 18px;
+						}
+					}
+				}
+				.pinterest-ads {
+					display: none;
+				}
+			}
+		}
+		.ads-container {
+			.ads-item {
+				&:first-child {
+					display: block;
+					margin-top: 32px;
+				}
+			}
+		}
+	}
+	footer {
+		height: auto;
+	}
+}
+
+
+// Small devices
+@media (max-width: $screen-xs) {
+	.container {
+		width: 100%;
+		.ads-img {
+			margin: 10px 0px;
+			padding: 0 10px;
+		}
+		.left-section {
+			article {
+				margin-bottom: 5px;
+				.pin-description {
+					p {
+						display: none;
+					}
+					h2 {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.right-section {
+			section {
+				article {
+					.ads-lg {
+						display: none;
+					}
+					.ads-sm {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.main-container {
+		.thumbnail-container {
+			article {
+				width: 98%;
+				a {
+					.thumb-description {
+						h2 {
+							font-size: 22px;
+						}
+					}
+				}
+			}
+		}
+		.pin-title {
+			h2 {
+				font-size: 18px;
+			}
+		}
+		.pinterest-container {
+			.pinterest-grid {
+				article {
+					margin: 0 0 5px;
+					.category {
+						margin-top: 0px;
+						margin-bottom: 5px;
+					}
+					.pin-description {
+						h2 {
+							font-size: 16px;
+							margin-top: 5px;
+						}
+						p {
+							display: none;
+						}
+					}
+					&.pinterest-ads {
+						.ads-image-lg {
+							display: none;
+						}
+						.ads-image-sm {
+							display: flex;
+						}
+					}
+				}
+				.pinterest-ads {
+					display: flex;
+				}
+			}
+			button {
+				width: percentage(280px/548px);
+				font-size: 22px;
+			}
+		}
+		.ads-container {
+			padding: 10px 0 50px 0;
+			.inner-ads-container {
+				width: 90%;
+				.ads-item {
+					header {
+						display: block;
+						h3 {
+							text-align: left;
+						}
+						&:nth-child(4){
+							display: none;
+						}
+					}
+					.ads-lg {
+						display: none;
+					}
+					.ads-sm {
+						display: block;
+						margin-bottom: 10px;
+					}
+					&:first-child {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		a {
+			margin: 0 3px;
+		}
+		.holder {
+			padding-bottom: 5px;
+			.right {
+				line-height: 1.5;
+			}
+		}
+	}
+}
+@media (max-width: 320px){
+	.container {
+		.ads-img {
+			margin: 0;
+			padding: 0;
+		}
+		.right-section {
+			.ads-wrapper {
+				width: 100%;
+			}
+		}
+	}
+	.main-container {
+		.pinterest-container {
+			.pinterest-grid {
+				article.pinterest-ads {
+					.ads-image-lg {
+						display: block;
+					}
+					.ads-image-sm {
+						display: none;
+					}
+				}
+			}
+		}
+		.ads-container {
+			.inner-ads-container {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+

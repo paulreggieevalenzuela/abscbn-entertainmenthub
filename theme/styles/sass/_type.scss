@@ -1,0 +1,77 @@
+// Global
+body {
+	font-family: $font-primary;
+}
+
+
+// Headers
+h1 {
+	
+}
+
+h2 {
+	&.thumbnail-headings {
+		font-size: 22px;
+		font-weight: 500;
+		font-family: $font-primary;
+		color: #fff;
+	}
+}
+
+h3 {
+	
+}
+
+h4 {
+	
+}
+
+
+// Links
+a {
+	&:link {
+		
+	}
+
+	&:hover {
+		
+	}
+
+	&:active {
+		
+	}
+
+	&:visited {
+		
+	}
+}
+
+
+// Inputs
+input[type=text] {
+
+}
+
+label {
+	
+}
+
+textarea {
+	
+}
+
+select {
+	
+}
+
+option {
+	
+}
+
+
+// Tables
+table {
+	td {
+
+	}
+}

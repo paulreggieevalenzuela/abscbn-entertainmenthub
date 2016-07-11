@@ -1,0 +1,805 @@
+
+* {
+	box-sizing: border-box;
+}
+.category-video, .category-article, .category-gallery {
+	background-image: url('../images/sprite-category.png');
+	background-repeat: no-repeat;
+}
+.category-video-gray, .category-article-gray, .category-gallery-gray {
+	background-image: url('../images/sprite-category-gray.png');
+	background-repeat: no-repeat;
+}
+.clear {
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+h1 {
+	&.logo {
+		span {
+			font-size: 20px;
+			font-weight: 100;
+		}
+	}
+}
+.styleguide-container {
+	width: percentage(960px/1180px);
+	margin: 0 auto;
+	.category-video {
+		height: 15px;
+		width: 20px;
+	}
+	.category-article {
+		height: 15px;
+		width: 20px;
+		background-position: -20px;
+	}
+	.category-gallery {
+		background-position: -40px;
+		height: 15px;
+		width: 20px;
+	}
+	.category-video-gray {
+		height: 15px;
+		width: 20px;
+	}
+	.category-article-gray {
+		height: 15px;
+		width: 20px;
+		background-position: -20px;
+	}
+	.category-gallery-gray {
+		background-position: -40px;
+		height: 15px;
+		width: 20px;
+	}
+	section {
+		&.thumbnails {
+			float: left;
+			article {
+				h2 {
+					font-size: 22px;
+					width: 360px;
+					clear: both;
+					margin: 0;
+				}
+			}
+		}
+		&.tags {
+			float: right;
+		}
+		p {
+			&.text-color-header {
+				color: #642d91;
+			}
+			&.text-color-normal {
+				color: #fff;
+			}
+		}
+		h1 {
+			&.ads-headings {
+				font-size: 36px;
+			}
+		}
+		h2 {
+			&.thumbnail-headings {
+				font-size: 22px;
+			}
+		}
+		h5 {
+			font-size: 30px;
+			background-color: #fff;
+			clear: both;
+			width: auto;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 20px 0 20px 0;
+		}
+		&.pinterest {
+			float: left;
+		}
+	}
+	span {
+		color: #fff;
+		font-size: 10px;
+		&.thumbnails-tags {
+			padding: 5px;
+			text-transform: uppercase;
+		}
+		&.tv-tag {
+			background-color: #411d65;
+		}
+		&.starmusic-tag {
+			background-color: #4c5892;
+		}
+		&.push-tag {
+			background-color: #da3b6f;
+		}
+		&.starcinema-tag {
+			background-color: #dab000;
+		}
+		&.myx-tag {
+			background-color: #e55a1b;
+		}
+		&.sponsor-tag {
+			background-color: #959595;
+		}
+	}
+	.text-size {
+		float: right;
+		p {
+			&.pinterest-para {
+				font-size: 14px;
+			}
+			&.category-tag {
+				font-size: 10px;
+			}
+			&.pinterest-headings {
+				font-size: 22px;
+			}
+		}
+	}
+}/*styleguide container*/
+img {
+	max-width: 100%;
+}
+
+/*MAIN-CONTAINER*/
+.container {
+	width: percentage(970px/1280px);
+	margin: 0 auto;
+	position: relative;
+	.ads-img {
+		max-width: 100%;
+		margin: 10px auto;
+	}
+	h1 {
+		margin: 0;
+		&.search-title {
+			margin: 10px 0;
+			font-size: 18px;
+			color: #555555;
+		}
+	}
+	.left-section, .right-section {
+		// position: absolute;
+	}
+	.left-section {
+		display: inline-block;
+		float: left;
+		width: percentage(640px/970px);
+		margin-bottom: 50px;
+		.category {
+			display: flex;
+			flex-direction: row;
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+		article {
+			display: flex;
+			background-color: #fff;
+			margin-bottom: 20px;
+			position: relative;
+			.pin-content {
+				width: percentage(370px/630px);
+				padding: 10px 0 0 20px;
+				position: relative;
+			}
+			.pin-description {
+				h2 {
+					font-size: 22px;
+					margin: 10px 0 0 0;
+				}
+				p {
+					font-size: 14px;
+					margin: 10px 10px 10px 0;
+				}
+			}
+			a {
+				display: block;
+			}
+			.bg-image {
+				position: relative;
+				overflow: hidden;
+				.overlay {
+					display: block;
+					position: absolute;
+					bottom: -100%;
+					transition: all 0.5s ease;
+				}
+				&:hover {
+					.overlay {
+						bottom: 0px;
+						transition: all 0.5s ease;
+					}
+				}
+				img {
+					display: block;
+				}
+			}
+			.border-bottom-right {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 10px;
+				height: 10px;
+				&.push {	
+					border-right: 2px solid #da3b6f;
+					border-bottom: 2px solid #da3b6f;
+				}
+				&.tv {
+					border-right: 2px solid #411d65;
+					border-bottom: 2px solid #411d65;
+				}
+				&.starcinema {
+					border-right: 2px solid #dab000;
+					border-bottom: 2px solid #dab000;
+				}
+				&.starmusic {
+					border-right: 2px solid #4c5892;
+					border-bottom: 2px solid #4c5892;
+				}
+				&.myx {
+					border-right: 2px solid #e55a1b;
+					border-bottom: 2px solid #e55a1b;
+				}
+				&.sponsored {
+					border-right: 2px solid #959595;
+					border-bottom: 2px solid #959595;
+				}
+			}
+			.border-top-right {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 10px;
+				height: 10px;
+				&.push {	
+					border-right: 2px solid #da3b6f;
+					border-top: 2px solid #da3b6f;
+				}
+				&.tv {
+					border-right: 2px solid #411d65;
+					border-top: 2px solid #411d65;
+				}
+				&.starcinema {
+					border-right: 2px solid #dab000;
+					border-top: 2px solid #dab000;
+				}
+				&.starmusic {
+					border-right: 2px solid #4c5892;
+					border-top: 2px solid #4c5892;
+				}
+				&.myx {
+					border-right: 2px solid #e55a1b;
+					border-top: 2px solid #e55a1b;
+				}
+				&.sponsored {
+					border-right: 2px solid #959595;
+					border-top: 2px solid #959595;
+				}
+			}
+		}
+	}
+	.right-section {
+		display: inline-block;
+		float: right;
+		width: percentage(300px/970px);
+		section {
+			article {
+				&:nth-child(1){
+					margin-top: 40px;
+				}
+				header {
+					a {
+						text-decoration: none;
+						color: #333;
+					}
+					h3 {
+						margin-bottom: 0;
+						font-weight: 300;
+						font-size: 18px;
+					}
+				}
+				.ads-sm {
+					display: none;
+				}
+			}
+		}
+	}
+}
+#wrapper {
+	background-color: #ccc;
+}
+/*Pinterest Grid*/
+#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+	display: none;
+}
+.column { float: left; }
+.size1of3 { width: 33.333%; }
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }
+.main-container {
+	background-color: #e0e3e4;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	.thumbnail-container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-start;
+		align-items: flex-start;
+		-webkit-box-pack: center;
+		-webkit-box-align: start;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		article {
+			margin: 0 0.15%;
+			position: relative;
+			overflow: hidden;
+			width: 33%;
+			margin-bottom: 3px;
+			a {
+				cursor: pointer;
+				text-decoration: none;
+				&:hover {
+					opacity: .6;
+					filter: alpha(opacity=60);
+					background: #642d91;
+					img {
+						opacity: .6;
+						filter: alpha(opacity=60);
+						background: #642d91;
+					}
+				}
+				img {
+					position: relative;
+					width: 100%;
+					display: block;
+				}
+				.thumb-description {
+					border: 0;
+					outline: 0;
+					position: absolute;
+					width: 100%;
+					bottom: 0px;
+					min-height: 120px;
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,1+100 */
+					background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+					padding: 20px;
+					.category {
+						display: flex;
+						flex-direction: row;
+						margin: 10px 0;
+					}
+					h2 {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}/* THUMBNAIL CONTAINER */
+	.hero-skinning {
+		padding-top: 160px;
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+	.pin-title {
+		width: percentage(960px/1280px);
+		margin: 0 auto;
+		position: relative;
+		.hero-title {
+			background: url('../images/heading-skin.png') no-repeat;
+			background-size: cover;
+			background-position: center center;
+			position: relative;
+		}
+		.border-top-left {
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-top: 2px solid #fff;
+			border-left: 2px solid #fff;
+			width: 10px;
+			height: 10px;
+		}
+		.border-top-right {
+			position: absolute;
+			right: 0;
+			top: 0;
+			border-top: 2px solid #fff;
+			border-right: 2px solid #fff;
+			width: 10px;
+			height: 10px;
+		}
+		.border-left {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			border-bottom: 2px solid #fff;
+			border-left: 2px solid #fff;
+			width: 10px;
+			height: 10px;
+		}
+		.border-right {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			border-bottom: 2px solid #fff;
+			border-right: 2px solid #fff;
+			width: 10px;
+			height: 10px;
+		}
+		h2 {
+			color: #fff;
+			font-size: 32px;
+			letter-spacing: 5px;
+			margin: 20px 0;
+			padding: 20px 10px;
+			position: relative;
+			text-align: center;
+		}
+	}
+	.pinterest-container {
+		width: percentage(960px/1280px);
+		margin: 0 auto 50px;
+		position: relative;
+		a {
+			text-decoration: none;
+		}
+		article {
+			background: #fff;
+			display: block;
+			margin: 5px 4px;
+			max-width: 100%;
+			width: 98%;
+			position: relative;
+			&.grid-item {
+				a.bg-image {
+					position: relative;
+					overflow: hidden;
+					.overlay {
+						display: block;
+						position: absolute;
+						bottom: -100%;
+						transition: all 0.5s ease;
+					}
+					&:hover {
+						.overlay {
+							bottom: 0px;
+							transition: all 0.5s ease;
+						}
+					}
+				}
+			}
+			&.pinterest-ads {
+				background: transparent;
+				margin: 0 auto;
+				justify-content: space-around;
+				.ads-image-sm {
+					display: none;
+				}
+			}
+			.border-top-right-sm {
+				display: none;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 10px;
+				height: 10px;
+				&.push {	
+					border-right: 2px solid #da3b6f;
+					border-top: 2px solid #da3b6f;
+				}
+				&.tv {
+					border-right: 2px solid #411d65;
+					border-top: 2px solid #411d65;
+				}
+				&.starcinema {
+					border-right: 2px solid #dab000;
+					border-top: 2px solid #dab000;
+				}
+				&.starmusic {
+					border-right: 2px solid #4c5892;
+					border-top: 2px solid #4c5892;
+				}
+				&.myx {
+					border-right: 2px solid #e55a1b;
+					border-top: 2px solid #e55a1b;
+				}
+				&.sponsored {
+					border-right: 2px solid #959595;
+					border-top: 2px solid #959595;
+				}
+			}
+			.border-top-left-sm {
+				display: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 10px;
+				height: 10px;
+				&.push {	
+					border-left: 2px solid #da3b6f;
+					border-top: 2px solid #da3b6f;
+				}
+				&.tv {
+					border-left: 2px solid #411d65;
+					border-top: 2px solid #411d65;
+				}
+				&.starcinema {
+					border-left: 2px solid #dab000;
+					border-top: 2px solid #dab000;
+				}
+				&.starmusic {
+					border-left: 2px solid #4c5892;
+					border-top: 2px solid #4c5892;
+				}
+				&.myx {
+					border-left: 2px solid #e55a1b;
+					border-top: 2px solid #e55a1b;
+				}
+				&.sponsored {
+					border-left: 2px solid #959595;
+					border-top: 2px solid #959595;
+				}
+			}
+			.border-left {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 10px;
+				height: 10px;
+				&.push {
+					border-left: 2px solid #da3b6f;
+					border-bottom: 2px solid #da3b6f;
+				}
+				&.tv {
+					border-left: 2px solid #411d65;
+					border-bottom: 2px solid #411d65;
+				}
+				&.starcinema {
+					border-left: 2px solid #dab000;
+					border-bottom: 2px solid #dab000;
+				}
+				&.starmusic {
+					border-left: 2px solid #4c5892;
+					border-bottom: 2px solid #4c5892;
+				}
+				&.myx {
+					border-left: 2px solid #e55a1b;
+					border-bottom: 2px solid #e55a1b;
+				}
+				&.sponsored {
+					border-left: 2px solid #959595;
+					border-bottom: 2px solid #959595;
+				}
+			}
+			.border-right {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 10px;
+				height: 10px;
+				&.push {	
+					border-right: 2px solid #da3b6f;
+					border-bottom: 2px solid #da3b6f;
+				}
+				&.tv {
+					border-right: 2px solid #411d65;
+					border-bottom: 2px solid #411d65;
+				}
+				&.starcinema {
+					border-right: 2px solid #dab000;
+					border-bottom: 2px solid #dab000;
+				}
+				&.starmusic {
+					border-right: 2px solid #4c5892;
+					border-bottom: 2px solid #4c5892;
+				}
+				&.myx {
+					border-right: 2px solid #e55a1b;
+					border-bottom: 2px solid #e55a1b;
+				}
+				&.sponsored {
+					border-right: 2px solid #959595;
+					border-bottom: 2px solid #959595;
+				}
+			}
+			a {
+				display: block;
+				color: #333;
+				transition: all .5s ease;
+			}
+			.pin-content {
+				padding: 10px 25px 35px 25px;
+			}
+			img {
+				width: 100%;
+				display: block;
+				height: auto;
+			}
+			.category {
+				display: flex;
+				flex-direction: row;
+				margin: 10px 0;
+			}
+			.pin-description {
+				h2 {
+					font-size: 22px;
+				}
+				p {
+					font-size: 14px;
+				}
+			}
+			&.ads {
+				background: none;
+			}
+		}
+	}/*PINTEREST CONTAINER*/
+	button.load-more {
+		background: #592a78;
+		border-radius: 10px;
+		border: 0;
+		color: #fff;
+		display: block;
+		font-weight: 300;
+		height: 60px;
+		font-size: 24px;
+		text-align: center;
+		margin: 60px auto;
+		outline: 0;
+		vertical-align: middle;
+		width: percentage(520px/960px);
+	}
+	.ads-container {
+		background: #ebebeb;
+		padding: 20px 50px 40px 50px;
+		.inner-ads-container {
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.ads-item {
+			header {
+				a {
+					text-decoration: none;
+					color: #333;
+				}
+				h3 {
+					text-align: center;
+					margin: 10px 0 0 0;
+					font-size: 18px;
+					font-weight: 300;
+				}
+			}
+			.ads-sm {
+				display: none;
+			}
+			&:first-child {
+				display:none;
+			}
+		}
+	}/*ads-container*/
+}/*main-container*/
+span {
+	color: #fff;
+	font-size: 10px;
+	letter-spacing: 1px;
+	&.thumbnails-tags {
+		padding: 5px 10px;
+		vertical-align: middle;
+		text-transform: uppercase;
+	}
+	&.tv-tag {
+		background-color: #411d65;
+	}
+	&.starmusic-tag {
+		background-color: #4c5892;
+	}
+	&.push-tag {
+		background-color: #da3b6f;
+	}
+	&.starcinema-tag {
+		background-color: #dab000;
+	}
+	&.myx-tag {
+		background-color: #e55a1b;
+	}
+	&.sponsor-tag {
+		background-color: #959595;
+	}
+}
+.category-gallery, .category-gallery-gray {
+	height: 15px;
+	width: 20px;
+	background-position: -40px;
+	margin: 3px 5px;
+}
+.category-video, .category-video-gray {
+	height: 15px;
+	width: 20px;
+	background-position: 0px;
+	margin: 3px 5px;
+}
+.category-article, .category-article-gray {
+	height: 15px;
+	width: 20px;
+	background-position: -20px;
+	margin: 3px 5px;
+}
+footer { 
+	width: 100%; 
+	clear: both;
+	height: 40px;
+	color: #fff; 
+	background: #3e1965; 
+	font-weight: 100; 
+	font-size: 12px; 
+	position: relative; 
+	z-index: 10; 
+	.holder { 
+		margin: 0 auto; 
+		width: 92.1875%; 
+		padding: 0px;
+		p {
+			margin-bottom: 0;
+		} 
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+	}
+	a {
+		color: #fff;
+		margin-left: 15px; 
+		text-transform: uppercase;
+		text-decoration: none;
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:0.7s;
+	-moz-animation-duration:0.7s;
+	animation-duration:0.7s;
+	-webkit-animation-delay: 0.2s;
+	-moz-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+
+
